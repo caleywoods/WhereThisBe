@@ -1,2 +1,15 @@
-<h1>Location</h1>
-<p>Welcome to Where's It At?!</p>
+<h1>Locations</h1>
+<br />
+<% @locations.each do |location| %>
+  <b>Address:</b> <%= location.address %>
+  <br />
+  <b>Latitude:</b> <%= location.latitude %>
+  <br />
+  <b>Longitude:</b> <%= location.longitude %>
+  <br />
+  <%= link_to "View", location %>
+  <br />
+<% end %>
+<br />
+<br />
+<%= link_to "New", new_location_path %>
